@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Portofolio personal - SMKN 26 Jakarta - Siswa passionate dalam teknologi dan kreatif">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="MyWebsite">
+    <title>Portofolio Saya - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦊</text></svg>">
+</head>
+<body>
+    <!-- Loading Page -->
+    <div id="loading-page">
+        <div class="loader-container">
+            <div class="loader">
+                <div class="loader-circle"></div>
+                <div class="loader-text">Hai, assalamu'alaikum! 🤩 <br>Apa kabar? 👋</div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal" role="dialog" aria-labelledby="login-title" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="login-title"><i class="fas fa-user-circle"></i> Selamat Datang!</h2>
+                <p>Halo, dengan siapa disini? <br>Kenalan Yuk!</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="user-name" placeholder="Masukkan nama kamu" required autocomplete="name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="user-email" placeholder="Masukkan email kamu" required autocomplete="email">
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>KLIK DISINI YA</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <div class="mascot-login">
+                <div class="mascot" role="img" aria-label="Mascot rubah">🦊</div>
+                <p class="mascot-speech">Hai! Siapa nama kamu? 😄</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Menu utama">
+            <div class="nav-logo">
+                <span class="logo-text">MyWebsite</span>
+            </div>
+            <button class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem"><i class="fas fa-user"></i> <span>About</span></a></li>
+                <li role="none"><a href="#message" class="nav-link" role="menuitem"><i class="fas fa-comment"></i> <span>Message</span></a></li>
+                <li role="none"><a href="#social" class="nav-link" role="menuitem"><i class="fas fa-share-alt"></i> <span>Social</span></a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="datetime" aria-label="Jam dan tanggal saat ini">
+                    <span id="time">00:00:00</span>
+                    <span id="date">01 Jan 2024</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn" aria-label="Ganti tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="music-toggle" class="music-btn" aria-label="Putar musik">
+                    <i class="fas fa-music"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section" aria-label="Beranda">
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="greeting">
+                        <span class="wave" role="img" aria-label="Melambaikan tangan">👋</span>
+                        <h1>Hai, <span id="welcome-name">Teman!</span></h1>
+                    </div>
+                    <h2>Selamat Datang di Website Saya</h2>
+                    <p class="intro-text">
+                        Senang bisa kenal denganmu! Perkenalkan, saya adalah seorang siswa yang passionate 
+                        dalam dunia teknologi dan kreatif. Mari kita saling mengenal lebih jauh!
+                    </p>
+                    <div class="home-buttons">
+                        <a href="#about" class="btn btn-primary">Tentang Saya <i class="fas fa-arrow-down"></i></a>
+                        <a href="#social" class="btn btn-secondary">Sosmed Saya <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="user-info-display">
+                        <p><i class="fas fa-check-circle"></i> Login sebagai: <span id="display-name"></span></p>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fadil" alt="Foto profil" class="profile-photo">
+                        </div>
+                        <div class="profile-decoration" aria-hidden="true"></div>
+                    </div>
+                    <div class="mascot-home">
+                        <div class="mascot-bounce" role="img" aria-label="Mascot rubah">🦊</div>
+                        <p class="speech-bubble" aria-label="Pesan dari mascot">Nice to meet you! 🎉</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" aria-label="Tentang saya">
+            <div class="section-header">
+                <h2><i class="fas fa-user-graduate"></i> About Me</h2>
+                <p>Kenalan lebih jauh sama saya!</p>
+            </div>
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Sekolah</h3>
+                    <p>Saya adalah siswa di <strong>SMKN 26 Jakarta</strong></p>
+                    <span class="badge">Student</span>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Lokasi</h3>
+                    <p>Jakarta, Indonesia</p>
+                    <span class="badge">Location</span>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Hobi</h3>
+                    <p>Coding, Gaming, Desain</p>
+                    <span class="badge">Hobby</span>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Skills</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <span class="badge">Skills</span>
+                </div>
+            </div>
+            <div class="about-quote">
+                <blockquote>
+                    "Belajar itu nggak harus serius, tapi harus konsisten! 🚀"
+                </blockquote>
+                <cite>- Kata saya</cite>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message" class="section" aria-label="Kirim pesan">
+            <div class="section-header">
+                <h2><i class="fas fa-comment-dots"></i> Message Me</h2>
+                <p>Kirim pesan langsung ke WhatsApp saya!</p>
+            </div>
+            <div class="message-container">
+                <div class="message-form">
+                    <form id="whatsapp-form">
+                        <div class="input-group-message">
+                            <label for="msg-name"><i class="fas fa-user"></i> Nama</label>
+                            <input type="text" id="msg-name" placeholder="Nama kamu" required autocomplete="name">
+                        </div>
+                        <div class="input-group-message">
+                            <label for="msg-content"><i class="fas fa-comment"></i> Pesan</label>
+                            <textarea id="msg-content" placeholder="Tulis pesan kamu di sini..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Kirim via WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="message-info">
+                    <div class="mascot-message">
+                        <div class="mascot-float" role="img" aria-label="Mascot rubah">🦊</div>
+                    </div>
+                    <p class="whatsapp-info">
+                        <i class="fab fa-whatsapp"></i> WhatsApp: 088211971675
+                    </p>
+                    <p class="hint">Klik tombol di atas untuk mengirim pesan langsung ke WhatsApp saya!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="section" aria-label="Media sosial">
+            <div class="section-header">
+                <h2><i class="fas fa-globe"></i> Social Media</h2>
+                <p>Follow dan connect dengan saya!</p>
+            </div>
+            <div class="social-container">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-card instagram" aria-label="Ikuti di Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                    <p>@username</p>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-card twitter" aria-label="Ikuti di Twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                    <p>@username</p>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-card tiktok" aria-label="Ikuti di TikTok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                    <p>@username</p>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-card youtube" aria-label="Subscribe di YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                    <p>@username</p>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-card github" aria-label="Kunjungi GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <p>@username</p>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-card linkedin" aria-label="Connect di LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                    <p>@username</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer role="contentinfo">
+            <div class="footer-content">
+                <p>&copy; 2024 Created with <i class="fas fa-heart"></i> by <span id="footer-name">Fadil</span></p>
+                <p class="footer-quote">"Keep Learning, Keep Growing!" 🌟</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Hidden Audio Player -->
+    <audio id="bg-music" loop preload="none">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
